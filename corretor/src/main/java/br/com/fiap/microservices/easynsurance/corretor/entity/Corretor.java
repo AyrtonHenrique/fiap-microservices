@@ -14,7 +14,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 
 @Entity
 @Table(name = "TB_CORRETOR")
-public class Cliente {
+public class Corretor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,11 +23,22 @@ public class Cliente {
     private String nome;
     private String cpf;
 	private String endereco;
-	private String nomeUsuario;
+	private String email;
 	private String password;
 	private int idade;
+	private String telefone;
 	
 	
+	
+	
+	public String getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
 	public String getCpf() {
 		return cpf;
 	}
@@ -76,12 +87,13 @@ public class Cliente {
 		this.endereco = endereco;
 	}
 
-	public String getNomeUsuario() {
-		return nomeUsuario;
+
+	public String getEmail() {
+		return email;
 	}
 
-	public void setNomeUsuario(String nomeUsuario) {
-		this.nomeUsuario = nomeUsuario;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getPassword() {

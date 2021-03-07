@@ -1,28 +1,41 @@
 package br.com.fiap.microservices.easynsurance.corretor.dto;
 
-import br.com.fiap.microservices.easynsurance.corretor.entity.Cliente;
+import br.com.fiap.microservices.easynsurance.corretor.entity.Corretor;
 
 public class CorretorDTO {
 
 	private Long id;
 	private String nome;
 	private String endereco;
-	private String nomeUsuario;
+	private String emailUsuario;
 	private String password;
 	private int idade;
 	private String cpf;
+	private String telefone;
 	
+	
+	
+	public String getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
 	public CorretorDTO() {
 
 	}
 	
-	public CorretorDTO(Cliente corretor) {
+	public CorretorDTO(Corretor corretor) {
 		this.id = corretor.getId();
 		this.nome = corretor.getNome();
 		this.endereco = corretor.getEndereco();
-		this.nomeUsuario = corretor.getNomeUsuario();
+		this.emailUsuario = corretor.getEmail();
 		this.password = corretor.getPassword();
 		this.idade = corretor.getIdade();
+		this.telefone = corretor.getTelefone();
+		this.cpf = corretor.getCpf();
 	}
 	
 	public String getCpf() {
@@ -51,11 +64,11 @@ public class CorretorDTO {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
-	public String getNomeUsuario() {
-		return nomeUsuario;
+	public String getEmailUsuario() {
+		return emailUsuario;
 	}
-	public void setNomeUsuario(String nomeUsuario) {
-		this.nomeUsuario = nomeUsuario;
+	public void setEmailUsuario(String emailUsuario) {
+		this.emailUsuario = emailUsuario;
 	}
 	public String getPassword() {
 		return password;
