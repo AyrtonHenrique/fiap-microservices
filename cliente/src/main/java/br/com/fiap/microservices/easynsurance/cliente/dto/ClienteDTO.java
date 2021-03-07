@@ -7,7 +7,8 @@ public class ClienteDTO {
 	private Long id;
 	private String nome;
 	private String endereco;
-	private String nomeUsuario;
+	private String telefone;
+	private String emailUsuario;
 	private String password;
 	private int idade;
 	private String cpf;
@@ -20,12 +21,21 @@ public class ClienteDTO {
 		this.id = cliente.getId();
 		this.nome = cliente.getNome();
 		this.endereco = cliente.getEndereco();
-		this.nomeUsuario = cliente.getNomeUsuario();
+		this.emailUsuario = cliente.getEmail();
 		this.password = cliente.getPassword();
 		this.idade = cliente.getIdade();
 		this.cpf = cliente.getCpf();
+		this.telefone = cliente.getTelefone();
 	}
 	
+	public String getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
 	public String getCpf() {
 		return cpf;
 	}
@@ -52,11 +62,11 @@ public class ClienteDTO {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
-	public String getNomeUsuario() {
-		return nomeUsuario;
+	public String getEmailUsuario() {
+		return emailUsuario;
 	}
-	public void setNomeUsuario(String nomeUsuario) {
-		this.nomeUsuario = nomeUsuario;
+	public void setEmailUsuario(String emailUsuario) {
+		this.emailUsuario = emailUsuario;
 	}
 	public String getPassword() {
 		return password;

@@ -44,8 +44,9 @@ public class ClienteServiceImpl implements ClienteService {
         cliente.setEndereco(clienteCreateUpdateDTO.getEndereco());
         cliente.setIdade(clienteCreateUpdateDTO.getIdade());
         cliente.setNome(clienteCreateUpdateDTO.getNome());
-        cliente.setNomeUsuario(clienteCreateUpdateDTO.getNomeUsuario());
+        cliente.setEmail(clienteCreateUpdateDTO.getEmailUsuario());
         cliente.setPassword(clienteCreateUpdateDTO.getPassword());
+        cliente.setTelefone(clienteCreateUpdateDTO.getTelefone());
        
         Cliente savedCliente = clienteRepository.save(cliente);
 
@@ -53,15 +54,16 @@ public class ClienteServiceImpl implements ClienteService {
     }
 
     @Override
-    public ClienteDTO update(Long id, ClienteCreateUpdateDTO corretorCreateUpdateDTO) {
+    public ClienteDTO update(Long id, ClienteCreateUpdateDTO clienteCreateUpdateDTO) {
         Cliente cliente = getCliente(id);
 
-        cliente.setCpf(corretorCreateUpdateDTO.getCpf());
-        cliente.setEndereco(corretorCreateUpdateDTO.getEndereco());
-        cliente.setIdade(corretorCreateUpdateDTO.getIdade());
-        cliente.setNome(corretorCreateUpdateDTO.getNome());
-        cliente.setNomeUsuario(corretorCreateUpdateDTO.getNomeUsuario());
-        cliente.setPassword(corretorCreateUpdateDTO.getPassword());
+        cliente.setCpf(clienteCreateUpdateDTO.getCpf());
+        cliente.setEndereco(clienteCreateUpdateDTO.getEndereco());
+        cliente.setIdade(clienteCreateUpdateDTO.getIdade());
+        cliente.setNome(clienteCreateUpdateDTO.getNome());
+        cliente.setTelefone(clienteCreateUpdateDTO.getTelefone());
+        cliente.setEmail(clienteCreateUpdateDTO.getEmailUsuario());
+        cliente.setPassword(clienteCreateUpdateDTO.getPassword());
 
         Cliente savedCliente = clienteRepository.save(cliente);
 
@@ -77,6 +79,6 @@ public class ClienteServiceImpl implements ClienteService {
 
     private Cliente getCliente(Long id) {
         return clienteRepository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+                .orElseThrow(() -> new ResponseStatusException( HttpStatus.NOT_FOUND, "Cliente de ID: " + id + " não encontrado."));
     }
 }

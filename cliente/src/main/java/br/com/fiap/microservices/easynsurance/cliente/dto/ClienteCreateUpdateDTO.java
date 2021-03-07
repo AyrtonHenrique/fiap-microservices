@@ -4,11 +4,19 @@ public class ClienteCreateUpdateDTO {
 
 	private String nome;
 	private String endereco;
-	private String nomeUsuario;
+	private String telefone;
+	private String emailUsuario;
 	private String password;
 	private int idade;
 	private String cpf;
 	
+	
+	public String getTelefone() {
+		return telefone;
+	}
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
 	public String getCpf() {
 		return cpf;
 	}
@@ -27,11 +35,11 @@ public class ClienteCreateUpdateDTO {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
-	public String getNomeUsuario() {
-		return nomeUsuario;
+	public String getEmailUsuario() {
+		return emailUsuario;
 	}
-	public void setNomeUsuario(String nomeUsuario) {
-		this.nomeUsuario = nomeUsuario;
+	public void setEmailUsuario(String emailUsuario) {
+		this.emailUsuario = emailUsuario;
 	}
 	public String getPassword() {
 		return password;
@@ -45,7 +53,14 @@ public class ClienteCreateUpdateDTO {
 	public void setIdade(int idade) {
 		this.idade = idade;
 	}
-	
-	
-	
+	public boolean validaDadosMinimosEnviados() {
+		return (this.cpf == null || this.cpf == "") || 
+				(this.emailUsuario == null || this.emailUsuario == "") || 
+				(this.endereco == null || this.endereco == "") || 
+				(this.idade == 0 || this.idade > 110 || this.idade < 18) || 
+				(this.nome == null || this.nome == "") || 
+				(this.password == null || this.password == "") || 
+				(this.telefone == null || this.telefone == ""); 
+	}
+
 }
