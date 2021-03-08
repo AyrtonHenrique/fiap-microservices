@@ -4,9 +4,9 @@ import com.fiap.conversa.infra.extension.toConversationModel
 import com.fiap.conversa.infra.extension.toConversationsModels
 import com.fiap.conversa.infra.extension.toViewModelMongo
 import com.fiap.conversa.infra.viewmodels.ConversationMongoResponse
-import com.fiap.conversa.models.Conversation
-import com.fiap.conversa.models.Message
-import com.fiap.conversa.repositories.ConversationRepository
+import com.fiap.conversa.domain.models.Conversation
+import com.fiap.conversa.domain.models.Message
+import com.fiap.conversa.domain.repositories.ConversationRepository
 import com.mongodb.client.MongoClient
 import com.mongodb.client.model.Filters.eq
 import com.mongodb.client.model.Updates.push

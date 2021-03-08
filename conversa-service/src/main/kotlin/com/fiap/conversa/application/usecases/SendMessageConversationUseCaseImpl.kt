@@ -1,8 +1,8 @@
-package com.fiap.conversa.usecases
+package com.fiap.conversa.application.usecases
 
-import com.fiap.conversa.models.Message
-import com.fiap.conversa.repositories.ConversationRepository
-import com.fiap.conversa.viewmodels.MessageRequest
+import com.fiap.conversa.domain.models.Message
+import com.fiap.conversa.domain.repositories.ConversationRepository
+import com.fiap.conversa.application.viewmodels.MessageRequest
 import io.micronaut.context.annotation.Context
 
 @Context

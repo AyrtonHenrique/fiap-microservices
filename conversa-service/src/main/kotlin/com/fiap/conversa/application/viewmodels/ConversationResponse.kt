@@ -1,7 +1,6 @@
-package com.fiap.conversa.viewmodels
+package com.fiap.conversa.application.viewmodels
 
-import com.fiap.conversa.infra.viewmodels.MessageMongoResponse
-import com.fiap.conversa.models.Message
+import com.fiap.conversa.domain.models.Message
 
 class ConversationResponse(
     val id: String,

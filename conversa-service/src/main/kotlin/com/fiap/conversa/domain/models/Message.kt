@@ -1,8 +1,10 @@
-package com.fiap.conversa.viewmodels
+package com.fiap.conversa.domain.models
 
-data class MessageRequest(
+
+data class Message(
     val idSender: String,
     val textMessage: String,
     val sendByInsurerAgent: Boolean
 ) {
+
 }

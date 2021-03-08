@@ -1,8 +1,7 @@
-package com.fiap.conversa.usecases
+package com.fiap.conversa.application.usecases
 
-import com.fiap.conversa.models.Conversation
-import com.fiap.conversa.repositories.ConversationRepository
-import com.fiap.conversa.viewmodels.ConversationResponse
+import com.fiap.conversa.domain.repositories.ConversationRepository
+import com.fiap.conversa.application.viewmodels.ConversationResponse
 import io.micronaut.runtime.http.scope.RequestScope
 
 @RequestScope

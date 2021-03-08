@@ -1,7 +1,7 @@
-package com.fiap.conversa.repositories
+package com.fiap.conversa.domain.repositories
 
-import com.fiap.conversa.models.Conversation
-import com.fiap.conversa.models.Message
+import com.fiap.conversa.domain.models.Conversation
+import com.fiap.conversa.domain.models.Message
 
 interface ConversationRepository {
     fun addNew(conversation: Conversation): String

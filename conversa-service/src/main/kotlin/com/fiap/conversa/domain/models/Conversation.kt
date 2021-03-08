@@ -1,7 +1,5 @@
-package com.fiap.conversa.models
+package com.fiap.conversa.domain.models
 
-import org.bson.codecs.pojo.annotations.BsonDiscriminator
-import org.hibernate.id.GUIDGenerator
 import java.util.*
 
 
