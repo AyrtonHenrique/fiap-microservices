@@ -4,6 +4,7 @@
 package br.com.fiap.microservices.easyinsurance.operadora.entity;
 
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -30,13 +31,16 @@ public class Operadora  {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @JsonProperty("razaoSocialOperdora")   
+    @JsonProperty("razaoSocialOperdora")
+    @Column(nullable = false)
     private String razaoSocialOperdora;
 
-    @JsonProperty("codigoRegistroAns") 
+    @JsonProperty("codigoRegistroAns")
+    @Column(nullable = false)
     private Long codigoRegistroAns;
 
     @JsonProperty("cnpj") 
+    @Column(nullable = false)
     private Long cnpj;
     
     @JsonProperty("nomeFantasia") 
