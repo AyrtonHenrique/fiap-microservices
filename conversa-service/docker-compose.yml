@@ -15,7 +15,6 @@ services:
       - mongo
     networks:
       - mongo-compose-network
-
   mongo:
     image: mongo
     environment:
@@ -26,10 +25,21 @@ services:
       - "27017:27017"
     volumes:
       - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
-#      - ./mongo:/data/db
+    #      - ./mongo:/data/db
     networks:
       - mongo-compose-network
-
+  webapp:
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    ports:
+      - 8080:8080
+    links:
+      - mongo
+    networks:
+      - mongo-compose-network
+    depends_on:
+      - mongo
 networks:
   mongo-compose-network:
     driver: bridge

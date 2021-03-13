@@ -10,7 +10,7 @@ import io.swagger.v3.oas.annotations.info.*
         version = "0.0"
     )
 )
-object Api {
+object ApplicationKt  {
     @JvmStatic
     fun main(args: Array<String>) {
         build()

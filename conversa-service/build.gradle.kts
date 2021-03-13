@@ -39,7 +39,6 @@ dependencies {
     implementation("io.micronaut.mongodb:micronaut-mongo-sync")
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
-    runtimeOnly("com.h2database:h2")
 }
 
 
@@ -49,6 +48,15 @@ application {
 
 java {
     sourceCompatibility = JavaVersion.toVersion("11")
+}
+
+sourceSets{
+    getByName("test").java.srcDirs("src/test/kotlin")
+//    test {
+//      java {
+//          setSrcDirs(kotlin.collections.mutableListOf())
+//      }
+//    }
 }
 
 tasks {
