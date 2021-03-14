@@ -81,7 +81,7 @@ public class CorretorController {
     		if(!corretorCreateUpdateDTO.validaDadosMinimosEnviados()) {
     			logger.info("Create: Criando um novo Corretor");
         		result = this.corretorService.create(corretorCreateUpdateDTO);
-        		return new ResponseEntity<CorretorDTO>(result, HttpStatus.OK);
+        		return new ResponseEntity<CorretorDTO>(result, HttpStatus.CREATED);
         	} else {
         		logger.info("Dados do Corretor enviados incompletos.");
         		return new ResponseEntity<CorretorDTO>(result, HttpStatus.BAD_REQUEST);
