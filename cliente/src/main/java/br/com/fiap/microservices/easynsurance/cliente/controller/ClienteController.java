@@ -80,7 +80,7 @@ public class ClienteController {
     		if(!clienteCreateUpdateDTO.validaDadosMinimosEnviados()) {
     			logger.info("Create: Criando um novo cliente");
         		result = this.clienteService.create(clienteCreateUpdateDTO);
-        		return new ResponseEntity<ClienteDTO>(result, HttpStatus.OK);
+        		return new ResponseEntity<ClienteDTO>(result, HttpStatus.CREATED);
         	} else {
         		logger.info("Dados do Cliente enviados incompletos.");
         		return new ResponseEntity<ClienteDTO>(result, HttpStatus.BAD_REQUEST);
