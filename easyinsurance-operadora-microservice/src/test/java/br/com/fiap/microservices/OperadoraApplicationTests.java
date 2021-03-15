@@ -43,11 +43,11 @@ public class OperadoraApplicationTests {
     	URI uri = new URI(baseUrl);
     	Operadora operadora = new Operadora();
     	
-    	operadora.setRazaoSocialOperdora("CAIXA DE ASSISTÊNCIA DO SETOR DE ENERGIA -EVIDA");
+    	operadora.setRazaoSocialOperdora("CAIXA DE ASSISTÃŠNCIA DO SETOR DE ENERGIA -EVIDA");
     	operadora.setCnpj(123456789000812l);
     	operadora.setCodigoRegistroAns(418374l);
     	operadora.setNomeFantasia("E-VIDA");
-    	operadora.setModalidade("Autogestão");
+    	operadora.setModalidade("AutogestÃ£o");
     	
         HttpHeaders headers = new HttpHeaders();
         headers.set("X-COM-PERSIST", "true");      
@@ -67,11 +67,11 @@ public class OperadoraApplicationTests {
         URI uri = new URI(baseUrl);
     	Operadora operadora = new Operadora();
     	
-    	operadora.setRazaoSocialOperdora("CAIXA DE ASSISTÊNCIA DO SETOR DE ENERGIA -EVIDA");
+    	operadora.setRazaoSocialOperdora("CAIXA DE ASSISTÃŠNCIA DO SETOR DE ENERGIA -EVIDA");
     	operadora.setCnpj(null);
     	operadora.setCodigoRegistroAns(418374l);
     	operadora.setNomeFantasia("E-VIDA");
-    	operadora.setModalidade("Autogestão");
+    	operadora.setModalidade("AutogestÃ£o");
          
         HttpHeaders headers = new HttpHeaders();
  
