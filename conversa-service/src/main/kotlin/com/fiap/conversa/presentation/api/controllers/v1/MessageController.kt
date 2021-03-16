@@ -1,4 +1,4 @@
-package com.fiap.conversa.presentation.api.controllers
+package com.fiap.conversa.presentation.api.controllers.v1
 
 import com.fiap.conversa.application.usecases.GetConversationUseCase
 import com.fiap.conversa.application.usecases.SendMessageConversationUseCase
