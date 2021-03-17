@@ -10,7 +10,6 @@ import br.com.fiap.microservices.easyinsurance.planos.entity.Plano;
 
 /**
  * @author SaraRegina
- * Com essa classe não se faz necessária a implementacao do método Service
  * 
  */
 

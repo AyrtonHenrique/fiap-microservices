@@ -49,7 +49,7 @@ public class PlanoApplicationTests {
 	    	plano.setNomePlano("A R CONTABILIDADE LTDA");
 	    	plano.setTipoContratacao(TipoContratacao.COLETIVO_EMPRESARIAL);
 	    	plano.setComercializacao(Comercializacao.LIBERADA);
-	    	plano.setCobertura("Ambulatorial + Hospitalar com obstetrícia");
+	    	plano.setCobertura("Ambulatorial + Hospitalar com obstetrÃ­cia");
 	    	plano.setAbrangencia(Abrangencia.NACIONAL);
 	         
 	        HttpHeaders headers = new HttpHeaders();
@@ -72,7 +72,7 @@ public class PlanoApplicationTests {
 	    	plano.setNomePlano(null);
 	    	plano.setTipoContratacao(null);
 	    	plano.setComercializacao(Comercializacao.LIBERADA);
-	    	plano.setCobertura("Ambulatorial + Hospitalar com obstetrícia");
+	    	plano.setCobertura("Ambulatorial + Hospitalar com obstetrÃ­cia");
 	    	plano.setAbrangencia(Abrangencia.GRUPO_ESTADOS);
 	         
 	        HttpHeaders headers = new HttpHeaders();
