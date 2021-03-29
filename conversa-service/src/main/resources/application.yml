@@ -25,4 +25,4 @@ datasources:
     dialect: H2
 jpa.default.properties.hibernate.hbm2ddl.auto: update
 mongodb:
-  uri: mongodb://ayrton:123456@localhost:27017/conversation-service
+  uri: mongodb://ayrton:123456@mongo:27017/conversation-service

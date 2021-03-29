@@ -30,9 +30,6 @@ services:
       - mongo-compose-network
   conversation-service:
     image: ayrtonhe/fiap-conversations-service:0.1.0
-#    build:
-#      dockerfile: ./Dockerfile
-#      context: .
     ports:
       - 8080:8080
     links:

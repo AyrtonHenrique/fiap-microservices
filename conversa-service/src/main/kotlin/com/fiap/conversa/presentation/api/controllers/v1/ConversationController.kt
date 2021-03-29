@@ -1,6 +1,7 @@
 package com.fiap.conversa.presentation.api.controllers.v1
 
 import com.fiap.conversa.application.usecases.CreateNewConversationUseCase
+import com.fiap.conversa.application.usecases.DeleteConversationUseCase
 import com.fiap.conversa.application.usecases.GetAllConversationsUseCase
 import com.fiap.conversa.application.usecases.GetConversationUseCase
 import com.fiap.conversa.application.viewmodels.ConversationRequest
@@ -14,7 +15,8 @@ import io.micronaut.http.annotation.*
 class ConversationController(
     private val _getAllConversationsUseCase: GetAllConversationsUseCase,
     private val _createNewConversationUseCase: CreateNewConversationUseCase,
-    private val _getConversationUseCase: GetConversationUseCase
+    private val _getConversationUseCase: GetConversationUseCase,
+    private val _deleteConversationUseCase: DeleteConversationUseCase
 ) {
 
     @Get()
@@ -33,8 +35,10 @@ class ConversationController(
         return _createNewConversationUseCase.execute(conversation)
     }
 
-    fun delete() {
-
+    @Status(HttpStatus.NO_CONTENT)
+    @Delete("/{idConversation}")
+    fun delete(@PathVariable idConversation: String) {
+        _deleteConversationUseCase.execute(idConversation)
     }
 
 }

@@ -8,4 +8,5 @@ interface ConversationRepository {
     fun sendMessage(idConversation: String, message: Message)
     fun getAll(): List<Conversation>
     fun getById(idConversation: String): Conversation
+    fun delete(idConversation: String)
 }

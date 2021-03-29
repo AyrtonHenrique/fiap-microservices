@@ -30,6 +30,10 @@ class ConversationRepositoryImpl(
         return doc.toConversationModel()
     }
 
+    override fun delete(idConversation: String) {
+        collection.deleteOne(eq("_id", idConversation))
+    }
+
     override fun getAll(): List<Conversation> {
 
         return collection.find().toList().toConversationsModels()

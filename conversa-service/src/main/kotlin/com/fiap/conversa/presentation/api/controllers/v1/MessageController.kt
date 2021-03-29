@@ -7,7 +7,7 @@ import com.fiap.conversa.domain.models.Message
 import io.micronaut.http.HttpStatus
 import io.micronaut.http.annotation.*
 
-@Controller("conversation/{idConversation}/message")
+@Controller("/conversation/{idConversation}/message")
 class MessageController(
     private val sendMessageConversationUseCase: SendMessageConversationUseCase,
     private val getConversationUseCase: GetConversationUseCase
