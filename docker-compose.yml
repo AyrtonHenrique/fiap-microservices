@@ -1,5 +1,4 @@
 version: '3.8'
-
 services:
   mongo-express:
     image: mongo-express
@@ -11,8 +10,8 @@ services:
       ME_CONFIG_MONGODB_PORT: 27017
       ME_CONFIG_MONGODB_ADMINUSERNAME: root
       ME_CONFIG_MONGODB_ADMINPASSWORD: MongoDB2019!
-    links:
-      - mongo
+    # links:
+    #   - mongo
     networks:
       - mongo-compose-network
   mongo:
@@ -32,8 +31,8 @@ services:
     image: ayrtonhe/fiap-conversations-service:0.1.0
     ports:
       - 8080:8080
-    links:
-      - mongo
+    # links:
+    #   - mongo
     networks:
       - mongo-compose-network
     depends_on:
