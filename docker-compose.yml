@@ -29,6 +29,8 @@ services:
       - mongo-compose-network
   conversation-service:
     image: ayrtonhe/fiap-conversations-service:0.1.0
+    deploy:
+      replicas: 2
     ports:
       - 8080:8080
     # links:
@@ -39,28 +41,37 @@ services:
       - mongo
   corretor-service:
     image: ayrtonhe/fiap-corretor-service
+    deploy:
+      replicas: 2
     ports:
       - 8082:8089
     networks:
       - mongo-compose-network
   cliente-service:
     image: ayrtonhe/fiap-cliente-service
+    deploy:
+      replicas: 2
     ports:
       - 8083:8088
     networks:
       - mongo-compose-network
   planos-service:
     image: ayrtonhe/fiap-planos-service
+    deploy:
+      replicas: 2
     ports:
       - 8084:8082
     networks:
       - mongo-compose-network
   operadora-service:
     image: ayrtonhe/fiap-operadora-service
+    deploy:
+      replicas: 2
     ports:
       - 8085:8081
     networks:
       - mongo-compose-network
 networks:
   mongo-compose-network:
-    external: true
+    driver: overlay
+    # external: true
