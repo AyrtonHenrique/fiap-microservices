@@ -68,3 +68,4 @@ services:
 networks:
   mongo-compose-network:
     driver: bridge
+    external: true
