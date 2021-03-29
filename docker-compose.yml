@@ -67,5 +67,4 @@ services:
       - mongo-compose-network
 networks:
   mongo-compose-network:
-    driver: bridge
     external: true
